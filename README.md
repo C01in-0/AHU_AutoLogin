@@ -16,7 +16,7 @@
 
 ### 1. 下载工具包
 由于 GitHub 在国内访问极不稳定，请直接点击下方加速链接下载：
-👉 **[点击下载最新版 AHU_AutoLogin.zip](https://mirror.ghproxy.com/https://github.com/你的用户名/你的仓库名/releases/latest/download/AHU_AutoLogin.zip)**
+👉 **[点击下载最新版 AHU_AutoLogin.zip](https://mirror.ghproxy.com/https://github.com/C01in-0/AHU_AutoLogin/releases/latest/download/AHU_AutoLogin.zip)**
 *(注：正式发布前请将链接中的 `你的用户名/你的仓库名` 替换为你的真实 GitHub 路径)*
 
 ### 2. 一键注入系统
@@ -59,7 +59,7 @@ Python 核心引擎借助 PyInstaller 的 `--noconsole --onefile` 参数，配�
 
 ```bash
 # 1. 克隆代码库
-git clone https://github.com/你的用户名/你的仓库名.git
+git clone https://github.com/C01in-0/AHU_AutoLogin.git
 cd 你的仓库名
 
 # 2. 准备虚拟环境与构建依赖
