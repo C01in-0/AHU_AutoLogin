@@ -1,0 +1,5 @@
+.env 
+login.exe 
+*.zip 
+build/ 
+dist/ 
