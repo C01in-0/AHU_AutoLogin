@@ -431,6 +431,7 @@ schtasks /delete /tn "Clear_User_Proxy_On_Logon" /f
 ## 🧾 更新记录
 
 ### v1.0.1
+
 - 移除旧版 mshta 自提权写法；
 - 改成更稳的管理员权限检测；
 - 如果不是管理员运行，就给出明确提示/自动用 PowerShell 重新拉起；
@@ -447,6 +448,17 @@ schtasks /delete /tn "Clear_User_Proxy_On_Logon" /f
 - 安装方式改为 `install.bat + install.ps1`；
 - 新增 `clear_proxy.ps1` 处理 Clash / Mihomo 系统代理残留；
 - 改进日志输出，便于排障。
+
+### v1.1.1
+
+- 修复旧任务不存在时安装脚本报错中断的问题；
+- 修复密码输入时数字字符可能明文显示的问题；
+- 优化任务清理逻辑；
+- 默认创建网络事件、延迟补偿、登录后、开机后四类触发任务；
+- 优化任务计划电源设置；
+- 安装器界面增加 `Author: Colin` 标识。
+
+核心认证逻辑未变化。新用户建议直接使用本版本。
 
 ---
 
