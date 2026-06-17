@@ -460,6 +460,22 @@ schtasks /delete /tn "Clear_User_Proxy_On_Logon" /f
 
 核心认证逻辑未变化。新用户建议直接使用本版本。
 
+### v1.1.2
+
+- 新增周期性保活任务：AHU_AutoLogin_KeepAlive；
+- 默认每周一 09:00 自动运行一次认证引擎；
+- 用于兜底处理长时间不断网、不重启、不重新登录时，校园网认证状态可能过期，但 Windows 没有再次触发网络事件的情况；
+- 保活任务不是常驻后台进程，只是通过 Windows 任务计划定时运行一次 login.exe；
+- 当前默认创建五类任务：
+1. AHU_AutoLogin：网络事件触发后立即认证；
+2. AHU_AutoLogin_Delay：网络事件触发后延迟 15 秒补充认证；
+3. AHU_AutoLogin_OnLogon：登录 Windows 后补充认证；
+4. AHU_AutoLogin_OnStart：系统启动后补充认证；
+5. AHU_AutoLogin_KeepAlive：每周一 09:00 周期性兜底认证；
+- 卸载脚本同步清理 AHU_AutoLogin_KeepAlive；
+- 核心 Portal 认证逻辑未变化。
+
+
 ---
 
 ## 💖 鸣谢与支持
