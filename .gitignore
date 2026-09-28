@@ -3,3 +3,8 @@ login.exe
 *.zip 
 build/ 
 dist/ 
+__pycache__/
+*.py[cod]
+*.log
+*.log.*
+*.spec
